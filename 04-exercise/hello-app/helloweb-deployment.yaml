@@ -6,6 +6,11 @@ metadata:
   labels:
     app: hello
 spec:
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  minReadySeconds: 30
   selector:
     matchLabels:
       app: hello
@@ -18,12 +23,7 @@ spec:
     spec:
       containers:
       - name: hello-app
-        env:
-          - name: HELLO_MESSAGE
-            valueFrom:
-              secretKeyRef:
-                name: helloweb
-                key: message
-        image: harbor.csvcdev.vpc.arvato-systems.de/k8s-workshop/hello-php:1.0
+        image: gcr.io/google-samples/hello-app:1.0
         ports:
         - containerPort: 80
+
