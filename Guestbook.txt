@@ -1,0 +1,25 @@
+Guestbook
+https://cloud.google.com/kubernetes-engine/docs/tutorials/guestbook
+
+Wordpress mit PVC
+https://cloud.google.com/kubernetes-engine/docs/tutorials/persistent-disk
+
+Setting up HTTP Load Balancing with Ingress
+https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer
+
+Configuring Ingress for external load balancing
+https://cloud.google.com/kubernetes-engine/docs/how-to/load-balance-ingress
+
+
+
+Install Wordpress with Helm
+
+
+```
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install my-release bitnami/wordpress
+```
+
+
+
+Operator
