@@ -48,7 +48,7 @@ Das Ergebnis siehst Du im Cluster. Von der alten Version läuft noch ein Pod, ab
 Schaue Dir die Pods an. Es sieht so aus als würde der Container immer wieder restartet.
 Was ist die Ursache, wo liegt der Fehler.
 
-* Tip: der Code für den Container liegt unter `app/hello-php/docker` in der `index.php` kann man vielleicht erkennen was für URLs gültig sind.
+* Tip: der Code für den Container liegt unter `apps/hello-php/docker` in der `index.php` kann man vielleicht erkennen was für URLs gültig sind.
 
 
 ## (d) OhOh
@@ -68,21 +68,8 @@ Was ist die Ursache, wo liegt der Fehler?
 * `kubectl apply -f ./08-f-longway`
 
 Die Website die hier deployed wird scheint nicht erreichbar zu sein:
+Was ist hier alles falsch?
 
-Wer die Übung#2 nicht gemacht hat. Muss noch den Eintrag in der `/etc/hosts` anlegen.
-
-```bash
-$ curl website.k8s-workshop.info
-<html>
-<head><title>503 Service Temporarily Unavailable</title></head>
-<body>
-<center><h1>503 Service Temporarily Unavailable</h1></center>
-<hr><center>nginx</center>
-</body>
-</html>
-```
-
-Was ist hier (alles) falsch?
 
 # Lösungen
 
