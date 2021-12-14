@@ -67,8 +67,10 @@ Was ist die Ursache, wo liegt der Fehler?
 * CleanUP: `./cleanup.sh ; ./create-namespace.sh`
 * `kubectl apply -f ./08-f-longway`
 
-Die Website die hier deployed wird scheint nicht erreichbar zu sein:
-Was ist hier alles falsch?
+Die Website die hier deployed wird scheint nicht erreichbar zu sein. Was ist hier alles falsch?
+
+* In dem Cluster muss schon ein Ingress Controller verfügbar sein!
+* Ziel: Die Website ist über die externe IP des Ingress Controllers ausrufbar -> http://EXTERNAL-IP/long-way/
 
 
 # Lösungen
