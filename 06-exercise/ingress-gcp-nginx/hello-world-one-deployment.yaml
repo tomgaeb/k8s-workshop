@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gke-helloworld-one  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gke-helloworld-one
+  template:
+    metadata:
+      labels:
+        app: gke-helloworld-one
+    spec:
+      containers:
+      - name: gke-helloworld-one
+        image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:1.0
+        ports:
+        - containerPort: 8080

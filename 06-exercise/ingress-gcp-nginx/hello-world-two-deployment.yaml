@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gke-helloworld-two  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gke-helloworld-two
+  template:
+    metadata:
+      labels:
+        app: gke-helloworld-two
+    spec:
+      containers:
+      - name: gke-helloworld-two
+        image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
+        ports:
+        - containerPort: 8080

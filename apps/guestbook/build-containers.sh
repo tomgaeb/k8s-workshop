@@ -1,12 +1,13 @@
 #!/bin/bash
 
-export HARBOR=harbor.csvcdev.vpc.arvato-systems.de/k8s-workshop
+export REGISTRY=europe-west3-docker.pkg.dev/test-tom-342012/k8s-workshop/
 
 # Build Guestbook
 
-docker build -t ${HARBOR}/gb-frontend:v5 docker/
+#docker build -t ${HARBOR}/gb-frontend:v5 docker/
+gcloud builds submit --tag ${REGISTRY}/gb-frontend:v5
 
-docker push  ${HARBOR}/gb-frontend:v5
+#docker push  ${HARBOR}/gb-frontend:v5
 
 
 # Copy redis Container to Harbor
