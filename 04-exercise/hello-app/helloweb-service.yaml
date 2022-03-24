@@ -10,5 +10,5 @@ spec:
     tier: web
   ports:
   - port: 80
-    targetPort: 8080
-  type: LoadBalancer
+    targetPort: 80
+  type: ClusterIP
