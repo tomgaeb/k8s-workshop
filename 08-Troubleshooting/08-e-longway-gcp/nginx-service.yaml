@@ -10,6 +10,6 @@ spec:
     # the port that this service should serve on
   - name: http
     port: 80
-    targetPort: 80
+    targetPort: 8080
   selector:
-    app: web
+    app: website

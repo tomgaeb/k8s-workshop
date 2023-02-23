@@ -6,7 +6,7 @@ data:
   vhost.conf: | 
     server {
       listen 0.0.0.0:8080;
-      server_name website.k8s-workshop.info;
+      server_name _;
 
       root /website/htdocs;
       index index.html;

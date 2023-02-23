@@ -14,14 +14,14 @@ spec:
     spec:
       initContainers:
       - name: git
-        image: harbor.csvcdev.vpc.arvato-systems.de/k8s-workshop/git:latest
+        image: alpine/git
         imagePullPolicy: IfNotPresent
         command:
           - "sh"
           - "-c"
           - "cd /website; \
              if [ ! -d k8s-workshop ]; then \ 
-             git clone https://github.com/Kube-ASY/k8s-workshop.git ; \ 
+             git clone https://github.com/tomgaeb/k8s-workshop.git ; \ 
              ln -sf k8s-workshop/website htdocs ; \
              else \
              cd k8s-workshop ; \
@@ -32,7 +32,7 @@ spec:
             mountPath: /website            
       containers:
       - name: nginx
-        image: harbor.csvcdev.vpc.arvato-systems.de/k8s-workshop/gb-nginx:1.19
+        image: bitnami/nginx:1.20
         imagePullPolicy: IfNotPresent
         resources:
           requests:
